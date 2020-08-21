@@ -2,11 +2,13 @@ import ast
 import json
 import linecache
 import re
+import socket
 import traceback
 from builtins import __import__  # for use when we patch it in "builtins"
 from difflib import SequenceMatcher
 from functools import partial
 from unittest.mock import patch
+from uuid import uuid4
 
 from IPython.display import HTML
 from ipykernel.ipkernel import IPythonKernel
@@ -16,8 +18,8 @@ BOOT = """\
 %load_ext autoreload
 %autoreload 2
 """
-
 LESSON_NUMBER = 1
+UUID = str(uuid4())
 
 def start_lesson(lesson_number):
     global LESSON_NUMBER
@@ -111,6 +113,7 @@ def _run_exercise(number, source):
 
     if result != 'successful':
         print(output)
+        broadcast(f'{UUID} {number} {result}')
         return  # If it printed an exception, make no further complaints
 
     metadata = read_notebook_metadata(LESSON_NUMBER).get(number)
@@ -128,6 +131,7 @@ def _run_exercise(number, source):
             print(red(embox('Your output does not quite match',
                             'what the exercise is expecting:')))
             print(expected)
+            broadcast(f'{UUID} {number} mismatch')
             return
         else:
             print(output)
@@ -168,6 +172,9 @@ def _run_exercise(number, source):
 
     if success:
         texts.extend(['', 'Good job! You have completed this exercise'])
+        broadcast(f'{UUID} {number} successful')
+    else:
+        broadcast(f'{UUID} {number} failed')
 
     print(color(embox(*texts)))
 
@@ -301,3 +308,12 @@ green = partial(colorize, 32)
 yellow = partial(colorize, 33)
 extra_text_color = '\033[1;31m'
 missing_text_color = '\033[1;32m'
+
+def broadcast(text):
+    try:
+        data = text.encode('utf-8')
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
+        s.sendto(data, ('255.255.255.255', 12345))
+    except Exception:
+        pass

@@ -1,0 +1,57 @@
+Agenda
+
+1. The Moving Parts
+2. Your First Login!
+3. Notes On Syntax
+
+
+
+The Moving Parts
+
+
+
+Slack
+
+ • Channels and “topic”
+ • Direct messages
+ • #learning-python for Python questions
+ • # for Python questions
+
+
+          GitHub
+┌─────────────────────────┐
+│Your “cps-108” repository│
+│  (lessons, data files)  │
+└─────────────────────────┘
+            ↕
+   Laptop or Workstation
+┌─────────────────────────┐
+│  • H:\CPS108            │
+│  • VS Code, Python, git │
+└─────────────────────────┘
+
+
+
+Every session
+
+1. Login and launch VS Code
+3. Git Pull
+4. (Work on lesson or project)
+5. Git Commit
+6. Git Push
+
+
+
+ Today's exercise:
+
+
+
+
+learn.bluffton.edu
+ for instructions
+        ↓
+  Slack for help
+        ↓
+ GitHub for repo
+        ↓
+     VS Code

@@ -1,0 +1,66 @@
+
+
+-------------
+Welcome back!
+
+
+
+-------
+VS Code
+
+• Open VS Code
+• Shift+Ctrl+P “Theme” to change colors
+• Each file opens in a separate tab
+
+
+
+---------------
+lesson-01.ipynb
+
+• Open it by clicking its name
+• Select first cell then Shift+Enter
+• Code cells vs text cells
+• Shift+Enter vs Ctrl+Enter
+
+
+
+-------------
+How Code Runs
+
+Top to bottom
+Inside out
+The invisible world
+
+
+
+------------
+Get Started!
+
+• Open lesson-02.ipynb
+• Start trying the exercises
+• Remember: Shift+Enter runs a cell
+
+
+
+----------
+Exercise 5
+
+• Statements can be indented *beneath*
+  other statements!
+• Ctrl+L makes selecting code easy.
+
+
+
+-----------
+Exercise 14
+
+• Remembering the “best so far”
+• Need to keep up with *two* animals
+
+
+
+-----------
+Exercise 16
+
+• Loop *within* a loop!
+• *Plus* remembering the winner.
