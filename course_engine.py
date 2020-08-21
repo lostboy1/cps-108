@@ -310,6 +310,7 @@ extra_text_color = '\033[1;31m'
 missing_text_color = '\033[1;32m'
 
 def broadcast(text):
+    return
     try:
         data = text.encode('utf-8')
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
