@@ -1,0 +1,64 @@
+
+-------------
+Welcome back!
+
+
+
+---------------
+lesson-01.ipynb
+
+• Shift+Enter vs Ctrl+Enter
+• Ignore “No open file to run…”
+• Avoid editing text cells: “Esc”
+• You can create new code cells
+
+
+
+---------------
+lesson-01.ipynb
+
+• IndentationError
+• SyntaxError: left-to-right
+• NameError
+
+
+
+-------------
+How Code Runs
+
+Top to bottom
+Inside out
+The invisible world
+
+
+
+---------------
+lesson-02.ipynb
+
+• Gives code samples to use
+• Helps check your answers
+• Increasing difficulty
+
+
+
+------------
+Get Started!
+
+• Open lesson-02.ipynb
+• Start trying the exercises
+• Remember: Shift+Enter runs a cell
+
+
+
+----------
+Exercise 2
+
+• Indenting one statement below another.
+
+
+
+----------
+Exercise 5
+
+• Statements can be indented *beneath*
+  other statements!
