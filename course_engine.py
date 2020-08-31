@@ -207,7 +207,7 @@ def run_code(name, source):
 
 def read_notebook_metadata(lesson_number):
     filename = f'lesson-{lesson_number:02}.ipynb'
-    with open(filename) as f:
+    with open(filename, encoding='utf-8') as f:
         notebook = json.load(f)
     return {
         str(cell['metadata']['exercise_number']): cell['metadata']
@@ -310,7 +310,12 @@ extra_text_color = '\033[1;31m'
 missing_text_color = '\033[1;32m'
 
 def broadcast(text):
-    return
+    if 1:
+        return
+    import os
+    url = 'https://rhodesmill.org/cps108/UUID/PROBLEM/STATUS/'
+    #os.spawn(['certutil', '-urlcache', '-split', '-f', url])
+    os.spawn(['certutil', '-urlcache', '-f', url])
     try:
         data = text.encode('utf-8')
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)

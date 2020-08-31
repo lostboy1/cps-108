@@ -1,0 +1,64 @@
+
+-------------------
+Lesson 2, continued
+
+• print
+• if
+• for
+
+
+
+import csv
+file = open('Data/state-animals.csv')
+for state, animal in csv.reader(file):
+    print(state)
+
+
+
+dollars = 10
+if dollars > 2:
+    print('Enough for coffee')
+if dollars > 9:
+    print('Enough for lunch')
+if dollars > 20:
+    print('Enough for dinner')
+
+
+
+import csv
+file = open('Data/state-animals.csv')
+for state, animal in csv.reader(file):
+    if state.startswith('South'):
+        print(state)
+
+
+
+import csv
+file = open('Data/state-animals.csv')
+for state, animal in csv.reader(file):
+    if animal.startswith('Gray'):
+        print(animal)
+
+
+
+import csv
+file = open('Data/state-animals.csv')
+for state, animal in csv.reader(file):
+    if state == 'Ohio':
+        print(animal)
+
+
+
+import csv
+file = open('Data/state-animals.csv')
+for state, animal in csv.reader(file):
+    if animal == 'Bison':
+        print(state)
+
+
+
+import csv
+file = open('Data/state-animals.csv')
+for state, animal in csv.reader(file):
+    if animal.startswith(state):
+        print(animal)

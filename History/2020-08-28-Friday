@@ -1,0 +1,59 @@
+
+
+
+     Friday
+    28 August
+      2020
+
+
+
+--------------
+Recurse Center
+ Social Rules
+
+
+
+-------
+VS Code
+
+• Updated course engine, so “Pull”
+• Grading
+  • 2 quizzes per week
+  • Lessons — eventual
+• Ctrl+L makes selecting code easy.
+
+
+
+-----------
+Exercise 14
+
+• Remembering the “best so far”
+• Need to keep up with *two* animals
+
+
+
+import csv
+winner = 'Zzzz'
+for state, animal in csv.reader(open('Data/state-animals.csv')):
+    if animal < winner:
+        winner = animal
+print('The winner is', winner)
+
+
+
+import csv
+winner = ''
+for state, animal in csv.reader(open('Data/state-animals.csv')):
+    if winner == '':
+        winner = animal
+    if animal < winner:
+        winner = animal
+print('The winner is', winner)
+
+
+
+-----------
+Exercise 16
+
+• Loop *within* a loop!
+• *Plus* remembering the winner.
