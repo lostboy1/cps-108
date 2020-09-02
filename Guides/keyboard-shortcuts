@@ -1,0 +1,26 @@
+
+Standard shortcuts:
+
+Ctrl+S
+Ctrl+Plus Ctrl+Minus
+Shift+Arrows
+Ctrl+C Ctrl+V Ctrl+X
+Ctrl+Z Ctrl+Y
+Ctrl+N Ctrl+O Ctrl+W Ctrl+Q
+Ctrl+Tab
+
+Shortcuts shared between VS Code and Google Chrome:
+
+Ctrl+T Shift+Ctrl+T
+
+VS Code specific shortcuts:
+
+Tab           Add indentation / choose completion
+Ctrl+L        Select current line
+Ctrl+Shift+L  Select all copies of current selection
+Shift+Ctrl+P  Command pallette ← look for “Help: Keyboard Shortcuts Reference”
+
+Notebook specific keystrokes:
+
+Shift+Enter   Run cell and move to next.
+Ctrl+Enter    Run cell and stay put.
