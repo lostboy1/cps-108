@@ -1,0 +1,83 @@
+
+====================================
+How To Run A Program (in your head!)
+====================================
+
+• Grab a pencil and paper
+• Start at the top of the program
+• Look up the first statement in the guide below
+• After you have run a statement, go to the next
+• When you reach the bottom, you’re done!
+
+===============
+Print Statement
+===============
+
+print('Hello, world!')
+print(x + 2)
+
+• Compute the value in the parenthesis,
+  looking up the value of any names on your
+  piece of paper.
+• The result gets printed to the screen.
+
+====================
+Assignment Statement
+====================
+
+animal = 'Ring-tailed cat'
+x = x + 1
+
+• If the name (like “animal” or “x”) is
+  not yet on your paper, write it down
+• Compute the value of the Right Hand Side,
+  looking up the value of any names on your
+  piece of paper.
+• Cross out the name’s current value (if any)
+• Write the new value next to the name
+
+============
+If Statement
+============
+
+if x > 5:
+    print('Warning, more than five.')
+
+• Compute the result of the “if” test,
+  looking up the value of any names on your
+  piece of paper.
+• If the test is true, run the code block.
+• If the test is false, skip the code block.
+
+========
+For Loop
+========
+
+for state, animal in csv.reader(file):
+    print(animal)
+
+for animal in animal_list:
+    print(animal)
+
+• Add the names between “for” and “in”
+  to your piece of paper if they are not
+  there already.
+• Find the list or file being looped over.
+• For each item, cross out the current value
+  of each name, write the new item next to them
+  instead, then run the block of code.
+• When you’re out of items, the “for” loop is
+  done and you can continue to the next statement
+  that’s indented at the same level as the “for”.
+
+===========
+Method Call
+===========
+
+animals.append('Moose')
+
+• Find the first name (that’s left of the “.”)
+  on your sheet of paper; it should have a
+  data structure (like a list) drawn next to it.
+* Depending on the rules of the data structure,
+  make the alteration described by the method.
