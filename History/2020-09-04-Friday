@@ -1,0 +1,67 @@
+
+
+2020 September 4
+Friday
+
+
+
+https://github.com/microsoft/vscode-python/issues/13701
+
+
+
+---------------------------
+Guides/how-to-run-a-program
+
+
+
+----------------------------
+“What does this program do?”
+
+   Specific vs General
+
+
+
+animals = ['Bison', 'Bear']
+winner = ''
+for animal in animals:
+    if animal > winner:
+        winner = animal
+
+
+
+Specific: “the winner is Bison”
+
+
+
+General: “last in the alphabet”
+
+
+
+---------
+Switching
+
+  browser ↔ VS code
+
+• Don’t move windows
+• Don’t minimize windows
+• Either tile, or:
+  - Mac: Command-Tab
+  - Windows: Alt-Tab
+
+
+
+“+” to open new cell
+
+
+
+--------
+Lesson 4
+
+
+
+• Building list, using list
+
+
+
+• Where does “if” go?
+  2 choices!

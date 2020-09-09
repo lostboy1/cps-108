@@ -1,0 +1,52 @@
+
+
+2020 September 7
+Monday
+
+
+
+repo = '/home/brandon/repository'
+check_output(['git', '-C', repo, log])
+
+
+
+NameError: name 'log' is not defined
+
+
+
+check_output(['git', '-C', repo, 'log'])
+
+
+
+• Documentation vs Examples
+  • https://docs.python.org/3/
+  • https://pymotw.com/3/
+
+
+
+• Lego blocks — for each example:
+  • Draw a line across the middle
+  • What are the inputs?
+  • What are the outputs?
+
+
+
+• Build the problem in miniature
+  • Start without loop
+  • Add loops once it’s working
+
+
+
+• Building list, using list
+
+
+
+• Where does “if” go?
+  2 choices!
+
+  "Refactorings"
+
+
+
+--------
+Lesson 4

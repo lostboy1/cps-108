@@ -1,0 +1,118 @@
+
+
+
+2020
+September 9
+Wednesday
+
+
+
+Noses must be covered!
+
+
+
+Unrolling a loop
+
+
+animals = ['Bison', 'Orca', 'Moose']
+for animal in animals:
+    print(animal)
+
+
+animal = 'Bison'
+print(animal)
+animal = 'Orca'
+print(animal)
+animal = 'Moose'
+print(animal)
+
+
+Substitution
+
+
+print('Bison')
+print('Orca')
+print('Moose')
+
+
+
+Unrolling a loop
+
+
+animals = ['Bison', 'Orca', 'Moose']
+winner = ''
+for animal in animals:
+    if animal > winner:
+        winner = animal
+print(winner)
+
+
+winner = ''
+animal = 'Bison'
+if animal > winner:
+    winner = animal
+animal = 'Orca'
+if animal > winner:
+    winner = animal
+animal = 'Moose'
+if animal > winner:
+    winner = animal
+print(winner)
+
+
+Substitution
+
+
+winner = ''
+if 'Bison' > winner:
+    winner = 'Bison'
+if 'Orca' > winner:
+    winner = 'Orca'
+if 'Moose' > winner:
+    winner = 'Moose'
+print(winner)
+
+
+---------
+if … else
+
+• See “Guides/how-to-run-a-program”
+
+if x > 5:
+    print('Warning, more than five.')
+else:
+    print('Less than or equal to five.')
+
+
+
+------------------------
+Lesson 4, last Exercise:
+
+Deduplication!
+
+• Sort
+• Compare with previous
+
+import csv
+animals = []
+for state, animal in csv.reader(open('Data/state-animals.csv')):
+    animals.append(animal)
+
+animals.sort()
+
+previous = ''
+for animal in animals:
+    if animal != previous:
+        previous = animal
+        print(animal)
+
+
+
+--------
+Lesson 5
+
+The Movies!
+
+• Download
+• View the CSV
+• “Our Daily Routine”

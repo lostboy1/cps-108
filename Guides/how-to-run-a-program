@@ -49,6 +49,14 @@ if x > 5:
 • If the test is true, run the code block.
 • If the test is false, skip the code block.
 
+if x > 5:
+    print('Warning, more than five.')
+else:
+    print('Less than five.')
+
+• (Same as above.)
+• But if the test is false, run the “else” block.
+
 ========
 For Loop
 ========

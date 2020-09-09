@@ -1,0 +1,96 @@
+
+
+
+ CPS-108
+ Monday
+ 2020 August 31
+
+
+
+-----------
+
+• Slides available in “History/”
+• I’ll grade Lesson 2 this afternoon,
+  put results in your GitHub repository
+  “10% / 20% … 100% done”
+• Ctrl-P versus Shift-Ctrl-P
+
+-----------
+Exercise 16
+
+• Loop *within* a loop!
+• *Plus* remembering the winner.
+
+
+
+import csv
+winner_score = 0
+winner_animal = ''
+for state, animal in csv.reader(open('Data/state-animals.csv')):
+    n = 0
+    for state2, animal2 in csv.reader(open('Data/state-animals.csv')):
+        if animal2 == animal:
+            n = n + 1
+    if n > winner_score:
+        winner_score = n
+        winner_animal = animal
+print(winner_animal)
+for state, animal in csv.reader(open('Data/state-animals.csv')):
+    if animal == winner_animal:
+        print(state)
+
+
+
+--------
+Notation
+
+Old days: 𝑥 ← 𝑥 + 1
+  Modern: x = x + 1
+
+
+
+Since “=” was already used,
+ the test had to be “==”
+
+  x = 5   # sets “x” to 5
+  x == 5  # “is x equal to 5?”
+
+  if x = 5:   # SyntaxError
+  if x == 5:  # correct
+
+
+
+-------
+Sorting
+
+Remembering “<” and “>”:
+   1,2,3  1 < 2 < 3
+   a,b,c  a < b < c
+
+print('Bison' < 'Coyote')
+
+Bison / Coyote
+Bison / Black bear
+Bighorn sheep / Bison
+Ant / Anteater
+
+
+
+----------------
+Sorting
+
+Where does the
+empty string sort?
+''
+Induction!
+
+
+
+----------------
+The first string
+in alphabetical order:
+
+''
+
+See: Lesson 2,
+  Exercises 14–15
