@@ -1,0 +1,10 @@
+
+=========================== lesson-02.ipynb ===========================
+
+There does not yet seem to be a solution for Exercise 1
+
+Score: 15 / 16 = 93%
+
+=========================== lesson-03.ipynb ===========================
+
+Score: 6 / 6 = 100%
