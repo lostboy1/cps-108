@@ -6,3 +6,11 @@ Score: 16 / 16 = 100%
 =========================== lesson-03.ipynb ===========================
 
 Score: 6 / 6 = 100%
+
+=========================== lesson-04.ipynb ===========================
+
+The solution for Exercise 2 does not yet produce the correct output.
+The solution for Exercise 3 does not yet produce the correct output.
+The solution for Exercise 4 does not yet produce the correct output.
+
+Score: 2 / 5 = 40%
