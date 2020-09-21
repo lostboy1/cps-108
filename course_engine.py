@@ -125,7 +125,12 @@ def _run_exercise(number, source):
 
     if 'expected' in metadata:
         expected = metadata['expected']
-        if output != expected:
+        if not output:
+            print(yellow(embox('Your script does not yet produce',
+                               'any output. Try adding some print()',
+                               'calls and then making sure they run.')))
+            return
+        elif output != expected:
             output, expected = festoon_diff(output, expected)
             print(output)
             print(red(embox('Your output does not quite match',

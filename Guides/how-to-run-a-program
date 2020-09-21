@@ -9,6 +9,18 @@ How To Run A Program (in your head!)
 • After you have run a statement, go to the next
 • When you reach the bottom, you’re done!
 
+================
+Import Statement
+================
+
+import csv
+
+• Add the name (like “csv”) to your sheet
+  of paper, if it is not already present.
+• Next to the name, write “<module csv>”
+  to represent access to all the functions
+  Python makes available in that module.
+
 ===============
 Print Statement
 ===============

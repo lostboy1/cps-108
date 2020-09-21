@@ -1,9 +1,7 @@
 
 =========================== lesson-02.ipynb ===========================
 
-There does not yet seem to be a solution for Exercise 1
-
-Score: 15 / 16 = 93%
+Score: 16 / 16 = 100%
 
 =========================== lesson-03.ipynb ===========================
 
