@@ -1,0 +1,54 @@
+
+
+
+2020 September 18
+Friday
+
+
+
+• Credit and grading
+• Tab completion
+• print()
+• Small data sets
+• Lists
+• Replaying the file:
+  seek() vs open()
+
+
+
+================
+Python Functions
+
+
+
+def NAME(PARAMETER):
+    BODY
+
+
+
+def load_state_animals_list():
+    import csv
+    animals = []
+    for state, animal in csv.reader(open('Data/state-animals.csv')):
+        animals.append(animal)
+    return animals
+
+def how_many_states(animal, animals):
+    n = 0
+    for another_animal in animals:
+        if animal == another_animal:
+            n = n + 1
+    return n
+
+animals = load_state_animals_list()
+winner = ''
+winning_score = 0
+for animal in animals:
+    score = how_many_states(animal,
+                            animals)
+    if score > winning_score:
+        winner = animal
+        winning_score = score
+    print(winner, score)
+
+print(winner)

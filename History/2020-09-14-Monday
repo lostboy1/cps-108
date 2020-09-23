@@ -1,0 +1,50 @@
+
+
+
+2020 September 14
+Monday
+
+
+
+“Attendance” — you *get credit*
+ for a successful commit from
+ *either* Wednesday or Friday
+
+
+
+Lesson 5,
+Exercise 1:
+How long does
+the loop take?
+
+
+
+ (Notice, for Windows
+  folks: “encoding=”!)
+
+
+
+from time import time
+t = time()
+...
+print(time() - t)
+
+
+
+Counts from 1970 January 1
+ the year the UNIX system
+      was launched
+
+    (The ancestor of
+    macOS, Linux, BSD!)
+
+
+
+        ========
+        Lesson 5
+
+ Make some more progress
+
+And be sure to commit *and*
+ push — attendance will be
+  graded normally today!

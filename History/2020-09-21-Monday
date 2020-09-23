@@ -1,0 +1,99 @@
+
+
+
+2020 September 21
+Monday
+
+
+
+Functions and Files
+
+
+
+If I create this file:
+
+-------------------- animal_stuff.py --------------------
+import csv
+
+def hello():
+    print('Hello, world!')
+
+def read_animals():
+    animals = []
+    for state, animal in csv.reader(open('Data/state-animals.csv')):
+        animals.append(animal)
+    return animals
+----------------------------------------
+
+Then I can use those functions in Notebook cells, like:
+
+--------------------
+import animal_stuff
+animal_stuff.hello()
+--------------------
+
+And like:
+
+--------------------
+import animal_stuff
+import csv
+
+animals = animal_stuff.read_animals()
+for animal in animals:
+    print(animal)
+--------------------
+
+Reload vs magic
+
+• If you are using the Notebook
+  normally, use the green “Restart”
+  circle at the top after editing a
+  .py file so that it gets imported
+  over again with your new code.
+
+• If instead you are running
+  `start_lesson()` before you get
+  to work each day, then edits
+  should get reloaded
+  automatically!
+
+
+
+Here’s a possible approach
+for Lesson 2 Exercise 16,
+where you are supposed to
+figure out which animal is
+most popular!  You can do
+the “deduplication” maneuver
+we learned earlier, and add
+a counter to see how big
+each group is:
+
+
+
+# Exercise 16
+import csv
+
+animals = []
+for state, animal in csv.reader(open('Data/state-animals.csv')):
+    animals.append(animal)
+
+# Deduplication
+#items = ['a', 'c', 'a', 'd', 'b']
+items = animals
+items.sort()
+
+popularities = []
+
+count = 0
+previous = ''
+for item in items:
+    if item != previous:
+        if previous != '':
+            popularities.append([previous, count])
+        count = 0
+    count = count + 1
+    previous = item
+popularities.append([previous, count])
+
+print(popularities)

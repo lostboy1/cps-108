@@ -1,0 +1,76 @@
+
+
+
+
+2020 September 11
+Friday
+
+
+
+
+
+
+Git:
+Distributed Version Control
+
+
+
+=================
+“Version Control”
+
+Keeps a backup of every
+previous version of a file
+
+
+
+• Recover deleted code
+• Recover old versions
+• Roll back a release
+• Bisection search for bugs
+
+
+  ↑
+┌───┐ IF New Commit
+└───┘ with movie file missing
+┌───┐ Wednesday’s
+└BIG┘
+┌───┐ Monday’s
+└───┘
+┌───┐ Friday’s
+└───┘
+  ⋮
+
+
+• Movies CSV *too big* for GitHub
+• So, git push failed
+• But further commits only *increase*
+  the amount of data sent to GitHub
+• So we need to *edit history*
+
+
+
+=================
+“Distributed”
+
+
+• Your local copy
+• My local copy
+• GitHub’s central copy
+
+
+
+• I’ve pushed a *new version*
+  with a .gitignore file
+• The instructions in the email ask
+  you to *undo* your big Wednesday
+  commit, pull my new one, then
+  try again
+
+
+=====
+Today
+
+• Follow email instructions
+  to get unstuck!
+• After you have successfully
+  pushed, work on Lesson 5!
