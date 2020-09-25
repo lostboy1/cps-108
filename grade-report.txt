@@ -13,8 +13,6 @@ Score: 5 / 5 = 100%
 
 =========================== lesson-05.ipynb ===========================
 
-The solution for Exercise 3 does not yet produce the correct output.
-The solution for Exercise 8 does not yet produce the correct output.
-There does not yet seem to be a solution for Exercise 9
+The solution for Exercise 9 does not yet produce the correct output.
 
-Score: 6 / 9 = 66%
+Score: 8 / 9 = 88%
