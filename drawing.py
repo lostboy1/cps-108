@@ -12,6 +12,8 @@ c.create_rectangle(175, 50, 225, 125, fill='red')
 c.create_rectangle(200, 250, 300, 400, fill='brown')
 c.create_polygon(150, 150, 250, 50, 350, 150, fill='green')
 c.create_oval(350, 50, 500, 150, fill='white')
+c.create_oval(350, 125, 425, 175, fill='white')
+c.create_oval(450, 125, 500, 150, fill='white')
 
 #draw grid
 for y in range(50, 500, 50):
