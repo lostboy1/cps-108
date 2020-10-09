@@ -1,0 +1,94 @@
+
+
+
+
+2020
+October 7
+Wednesday
+
+
+
+=====
+Color
+
+1 digit → 2 combinations
+
+0
+1
+
+2 digits → 4 combinations
+
+00
+01
+10
+11
+
+3 digits → 8 combinations
+
+000  100
+001  101
+010  110
+011  111
+
+8 digits → 256 combinations
+
+0 – 255 decimal
+00 – FF hexadecimal
+
+
+http://www.cknuckles.com/rgbsliders.html
+
+#000000 (black)
+#ffffff (white)
+
+
+
+=====
+Range
+
+for n in 10, 15, 20, 25:
+    print(n)
+
+for n in range(10, 30, 5):
+    print(n)
+
+
+
+“blue-chart.py”
+
+
+
+========================================
+from tkinter import Tk, Canvas, mainloop
+
+root = Tk()
+c = Canvas(root, width=500, height=500)
+c.pack()
+
+for i in range(0, 5):
+    blue = i * 60
+    color = '#0000{:02x}'.format(blue)
+    y = i * 100
+    c.create_rectangle(100, y + 25, 400, y + 75, fill=color)
+
+def react_to_click(event):
+    root.quit()
+
+c.bind('<Button-1>', react_to_click)
+mainloop()
+========================================
+
+
+
+r, g, b = 255, 128, 0
+f'#{r:02x}{g:02x}{b:02x}'
+
+
+
+• Keep working on adding
+  range() to your art
+
+• Use at least 3 colors
+  specified with #RRGGBB
+
+• Quiz due tomorrow night

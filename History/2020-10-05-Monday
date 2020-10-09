@@ -1,0 +1,31 @@
+
+
+
+2020
+October 5
+Monday
+
+
+
+for n in range(10, 30, 5):
+    print(n)
+
+
+
+Color
+
+• RGB = Red Green Blue
+  https://en.wikipedia.org/wiki/Cone_cell
+  http://www.cknuckles.com/rgbsliders.html
+
+• #000000 (black)
+  #ffffff (white)
+  0 – 255 versus 00 – FF
+
+
+
+• Keep working on adding
+  range() to your art
+
+• Use at least 3 colors
+  specified with #RRGGBB

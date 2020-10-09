@@ -4,6 +4,13 @@ How To Run A Program (in your head!)
 ====================================
 
 • Grab a pencil and paper
+• Divide the paper into two columns, like this:
+  ┌──────┬───────┐
+  │ Name │ Value │
+  ├──────┼───────┤
+  │      │       │
+  │      │       │
+  └──────┴───────┘
 • Start at the top of the program
 • Look up the first statement in the guide below
 • After you have run a statement, go to the next
@@ -17,9 +24,9 @@ import csv
 
 • Add the name (like “csv”) to your sheet
   of paper, if it is not already present.
-• Next to the name, write “<module csv>”
-  to represent access to all the functions
-  Python makes available in that module.
+• Next to the name, write the value
+  “<module csv>” to represent access to all
+  the functions in that module.
 
 ===============
 Print Statement
@@ -40,12 +47,12 @@ Assignment Statement
 animal = 'Ring-tailed cat'
 x = x + 1
 
-• If the name (like “animal” or “x”) is
-  not yet on your paper, write it down
 • Compute the value of the Right Hand Side,
   looking up the value of any names on your
   piece of paper.
-• Cross out the name’s current value (if any)
+• If the name (like “animal” or “x”) is
+  already on the sheet of paper, cross out
+  its old value; otherwise, add the name.
 • Write the new value next to the name
 
 ============
