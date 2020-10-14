@@ -1,0 +1,108 @@
+
+
+
+2020
+October 9
+Friday
+
+
+
+• Quizzes: 2 per week = 12
+• Small — 1 or 2 programs
+
+• `Guides/how-to-run-a-program`
+• Quiz 3: guide + in class
+• Quiz 4: guide + class + email
+
+
+======
+Quiz 4
+
+
+```
+x = 10
+print(x)
+```
+
+
+```
+x = 1
+y = x + 1
+print(y)
+```
+
+
+```
+biggest = 0
+for number in 4, 9, 1:
+    if number > biggest:
+        biggest = number
+print(biggest)
+```
+
+• IMPORTANT: Python copies
+  the *value* 4 into `biggest`
+  *not* the name `number`!
+
+
+```
+total = 0
+for number in 4, 9, 1:
+    total = total + number
+print(total)
+```
+
+
+```
+animals = ['Moose', 'Bison', 'Orca']
+animals.sort()
+for animal in animals:
+    print(animal)
+```
+
+
+======
+Quiz 3
+
+
+```
+animals = ['Moose', 'Bison', 'Orca']
+animals.sort()
+for animal in animals:
+    print(animal)
+```
+
+
+```
+animals = ['Moose', 'Coyote', 'Orca']
+winner = ''
+winning_length = 0
+
+for animal in animals:
+    if len(animal) > winning_length:
+        winner = animal
+        winning_length = len(winner)
+
+print(f'The longest animal has {winning_length} letters')
+```
+
+
+```
+import os
+filenames = os.listdir()
+filenames.sort()
+for filename in filenames:
+    print(filename)
+```
+
+
+```
+state_animals = [
+    ['Maine', 'Moose'],
+    ['Oklahoma', 'Bison'],
+    ['Washington', 'Orca'],
+]
+
+for state, animal in state_animals:
+    print(f'The state animal of {state} is {animal}')
+```

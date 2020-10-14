@@ -1,0 +1,68 @@
+
+
+
+2020
+October 12
+Monday
+
+
+Quiz 5:
+Due Tuesday night
+
+
+x = 1
+y = x + 1
+x = 2
+
+Should y auto-update
+if x is changed later?
+
+No!
+That would be:
+"Scary action at a distance"
+
+• See: Prolog
+• See: Facebook’s “React” web framework
+
+
+x = 1
+y = x + 1
+print(y)
+  ┌──────┬───────┐
+  │ Name │ Value │
+  ├──────┼───────┤
+  │  x   │   1   │
+  │  y   │   2   │
+  └──────┴───────┘
+Just “2”! Not “x + 1”?
+
+Experiment!
+
+x = 1
+y = x + 1
+x = 2
+print(y)
+
+
+
+Animation
+
+
+Examples/house.py
+
+• mainloop() stays busy
+• “callback” function
+
+
+def step():
+    x, y, x2, y2 = c.coords(cloud)
+    if x > 20:
+        c.move(cloud, -20, 0)
+    root.after(100, step)
+
+root.after(1, step)
+
+
+
+• Finish up Lesson 6
+• Finish adding range() to drawing

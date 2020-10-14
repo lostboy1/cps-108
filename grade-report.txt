@@ -19,10 +19,9 @@ Score: 8 / 9 = 88%
 
 =========================== lesson-06.ipynb ===========================
 
-The solution for Exercise 6 does not yet produce the correct output.
 There does not yet seem to be a solution for Exercise 7
 There does not yet seem to be a solution for Exercise 8
 There does not yet seem to be a solution for Exercise 9
 There does not yet seem to be a solution for Exercise 10
 
-Score: 5 / 10 = 50%
+Score: 6 / 10 = 60%
