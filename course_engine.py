@@ -69,9 +69,11 @@ def run_non_exercise(source):
 STYLE_DICT = {
     'ansi-red-fg': 'color: red',
     'ansi-red-intense-fg': 'color: red',
+    'ansi-red-bg': 'background-color: #800',
     'ansi-bold': 'font-weight: bold',
     'ansi-green-fg': 'color: #4f4',
     'ansi-green-intense-fg': 'color: #4f4',
+    'ansi-green-bg': 'background-color: #080',
     'ansi-yellow-fg': 'color: #ff2',
 }
 
@@ -130,7 +132,7 @@ def _run_exercise(number, source):
                                'any output. Try adding some print()',
                                'calls and then making sure they run.')))
             return
-        elif output != expected:
+        elif output.rstrip() != expected.rstrip():
             output, expected = festoon_diff(output, expected)
             print(output)
             print(red(embox('Your output does not quite match',
@@ -311,8 +313,8 @@ end_color = '\033[0m'
 red = partial(colorize, 31)
 green = partial(colorize, 32)
 yellow = partial(colorize, 33)
-extra_text_color = '\033[1;31m'
-missing_text_color = '\033[1;32m'
+extra_text_color = '\033[1;41m'
+missing_text_color = '\033[1;42m'
 
 def broadcast(text):
     if 1:
