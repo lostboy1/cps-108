@@ -1,0 +1,70 @@
+
+2020 October 16
+Friday
+  _____
+ /_____\   \o/   o   \o
+  |   |     |   /|\   |\
+  |___|    / \  / \  / \
+
+“ASCII art”
+
+
+• Attendance:
+  Starts begin graded again today!
+
+• Quiz 6: example programs
+
+total = 0
+for n in range(1, 11):
+    print(n, end=' ')
+    total = total + n
+print(total)
+
+Two names and values:
+• total 55
+• n 10
+
+In the line “print(n, end=' ')”,
+“end” is a “keyword argument”
+
+Positional vs keyword arguments.
+
+What arguments does “print”
+support?  Run “pydoc3 print”
+or ask VS Code.
+
+month = 'February'
+print(month)
+for n in range(1, 29):
+    if n % 7:
+        end = ' '
+    else:
+        end = '\n'
+    print(n, end)
+
+Three names and values:
+• month 'February'
+• n 28
+• end '\n'
+
+  / “float division”
+       OR
+ // “integer division”
+  % “remainder”
+
+Quiz 6: Indexing!
+
+• a[i]
+• IndexError
+• Zero-based
+
+  First index  0
+  Last index   n - 1
+  Groups of 5  i // 5
+  5 Groups     i % 5
+
+• Tired: a[len(a)-1]
+  Wired! a[-1]
+
+
+Work on Lesson 7!

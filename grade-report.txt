@@ -19,9 +19,7 @@ Score: 8 / 9 = 88%
 
 =========================== lesson-06.ipynb ===========================
 
-There does not yet seem to be a solution for Exercise 7
-There does not yet seem to be a solution for Exercise 8
 There does not yet seem to be a solution for Exercise 9
 There does not yet seem to be a solution for Exercise 10
 
-Score: 6 / 10 = 60%
+Score: 8 / 10 = 80%

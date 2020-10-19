@@ -1,0 +1,75 @@
+
+
+
+2020
+October 14
+Wednesday
+
+
+
+Quiz 5: Great job!
+Quiz 6: Due tomorrow (Thursday) night
+
+
+
+“Name = Value” vs “LHS = RHS”
+  https://en.cppreference.com/w/c/language/operator_assignment
+
+counts = {}
+counts['Bison'] = 0
+counts['Bison'] = counts['Bison'] + 1
+
+Aside: the Python Prompt
+
+# Order: RHS then LHS
+# RHS: a GET of the key’s value
+# LHS: a SET of the key’s value
+
+
+Quoting strings:
+Question The Rules!
+
+
+animal = 'Moose'
+
+But: what if I actually need
+a quote mark in my string?!
+
+
+A quick tour of your keyboard
+` ~ ^ *
+Underscore and PEP 8
+< > / ' " [] {} | \
+
+
+print('Don\'t worry.')
+print("Don't worry.")
+
+
+print('It said, "Don\'t worry."')
+print("It said, \"Don't worry.\"")
+
+print('Here is a backslash: \\.')
+
+print('Line 1.
+Line 2.')
+# (Syntax error!)
+
+print('Line 1.\nLine 2.')
+
+Triple quotes.
+
+print('''
+Don't worry about apostrophe.
+No problem with "quote marks!"
+Line 2.
+Line 3.
+''')
+
+print('Animal', end=' ')
+  _____
+ /_____\   \o/   o   \o
+  |___|     |   /|\   |\
+           / \  / \  / \
+Lesson 7!
+Next quiz!
