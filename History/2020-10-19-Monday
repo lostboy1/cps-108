@@ -1,0 +1,143 @@
+
+
+
+2020 October 19
+Monday
+
+
+
+Beavers preserve habitat during fires!
+
+https://photos.google.com/share/AF1QipOYNFRC5EiUWHd85zDOrzqBKL2gtsj1tH5rwpI5RvXLRnrrQRO_9IqHAXotjXiVXQ?key=QVNtYmRHWmhScXdNSEp4aFFhNURUUFhTazBRSEV3
+
+
+
+range() and fenceposts
+
+   1   2   3   Fence panels
+  ___ ___ ___
+ |\#/|\#/|\#/|
+ |/#\|/#\|/#\|
+ =============
+ 1   2   3   4  Fence posts
+
+
+• a[i:j]
+• Inclusive-exclusive, like range()
+• Or, think of it as fenceposts!
+
+
+s = 'abcde'
+
+  a b c d e
+ | | | | | |
+ 0 1 2 3 4 5
+
+print(s[2:4])
+
+
+=============
+Counting with
+a dictionary
+
+
+WITHOUT A DICTIONARY
+
+# Count every row
+
+import csv
+f = open('Data/movie-cast.csv')
+roles = 0
+for movie, rank, actor, character in csv.reader(f):
+    roles = roles + 1
+print(roles)
+
+# Count matching rows
+
+import csv
+f = open('Data/movie-cast.csv')
+sw = 0
+for movie, rank, actor, character in csv.reader(f):
+    if movie == 'Star Wars (1977)':
+        sw = sw + 1
+print('Star Wars cast size:', sw)
+
+# Count both matches and total
+
+import csv
+f = open('Data/movie-cast.csv')
+total = 0
+sw = 0
+for movie, rank, actor, character in csv.reader(f):
+    total = total + 1
+    if movie == 'Star Wars (1977)':
+        sw = sw + 1
+print('Star Wars:', sw)
+print('Total roles in movie history:', total)
+print('Star Wars fraction:', sw / total)
+
+# Count two kinds of match
+
+import csv
+f = open('Data/movie-cast.csv')
+sw = 0
+tesb = 0
+for movie, rank, actor, character in csv.reader(f):
+    if movie == 'Star Wars (1977)':
+        sw = sw + 1
+    if movie == 'Star Wars: Episode V - The Empire Strikes Back (1980)':
+        tesb = tesb + 1
+print('Star Wars:', sw)
+print('The Empire Strikes Back', tesb)
+
+
+
+==========================================
+How do we avoid exploding with a KeyError?
+
+OPTION 1
+
+import csv
+f = open('Data/state-animals.csv')
+rows = csv.reader(f)
+c = {}
+for state, animal in rows:
+    if animal not in c:
+        c[animal] = 0
+    c[animal] = c[animal] + 1
+
+OPTION 2
+
+f = open('Data/state-animals.csv')
+rows = csv.reader(f)
+c = {}
+for state, animal in rows:
+    if animal not in c:
+        c[animal] = 1
+    else:
+        c[animal] = c[animal] + 1
+
+OPTION 3 (NEW!): dict .get(key, default)
+
+f = open('Data/state-animals.csv')
+rows = csv.reader(f)
+c = {}
+for state, animal in rows:
+    c[animal] = c.get(animal, 0) + 1
+
+
+=============================
+The most popular state animal
+
+
+import csv
+c = {}
+f = open('Data/state-animals.csv')
+for state, animal in csv.reader(f):
+    c[animal] = c.get(animal, 0) + 1
+biggest = 0
+for animal, count in c.items():
+    if count > biggest:
+        biggest = count
+        winner = animal
+print(biggest, winner)
