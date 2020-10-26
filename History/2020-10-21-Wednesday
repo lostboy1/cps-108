@@ -1,0 +1,198 @@
+
+
+2020 October 21
+Wednesday
+
+
+
+======================
+Quick review of Quiz 7
+
+
+(Remember:
+ if you are confused
+ about the value of a name,
+ you can just print() it)
+
+
+
+
+===================
+Thanks to the dict,
+things are now easy
+
+
+
+First try at Lesson 2 Exercise 16:
+
+import csv
+f = open('Data/state-animals.csv')
+winning_count = 0
+for state, animal in csv.reader(f):
+    count = 0
+    f2 = open('Data/state-animals.csv')
+    for state2, animal2 in csv.reader(f2):
+        if animal2 == animal:
+            count = count + 1
+    if count > winning_count:
+        winning_count = count
+        winner = animal
+print(winning_count, winner)
+
+
+
+Then we learned about the list:
+
+import csv
+
+f = open('Data/state-animals.csv')
+animals = []
+for state, animal in csv.reader(f):
+    animals.append(animal)
+
+winning_count = 0
+for animal in animals:
+    count = 0
+    for animal2 in animals:
+        if animal2 == animal:
+            count = count + 1
+    if count > winning_count:
+        winning_count = count
+        winner = animal
+
+print(winning_count, winner)
+
+
+
+Now we know about the dict.
+It’s amazing!  We loop across
+the file ONCE and get ALL the
+animals out:
+
+import csv
+
+c = {}
+f = open('Data/state-animals.csv')
+for state, animal in csv.reader(f):
+    c[animal] = c.get(animal, 0) + 1
+
+winning_count = 0
+for animal, count in c.items():
+    if count > winning_count:
+        winning_count = count
+        winner = animal
+
+print(winning_count, winner)
+
+
+
+==================
+Lists within lists
+
+
+What if you wanted
+the 5 MOST POPULAR
+state animals?
+
+a = [
+  [3, 'Bison'],
+  [1, 'Orca'],
+  [2, 'Sheep'],
+  [1, 'Moose'],
+]
+a.sort()
+print(a)
+
+Try:
+print(a[-1])
+print(a[0])
+for score, animal in a[-2:]:
+    print(score, animal)
+for score, animal in a[:2]:
+    print(score, animal)
+
+
+What does this allow?
+
+NO MORE KEEPING
+UP WITH THE WINNER!
+
+
+import csv
+c = {}
+f = open('Data/state-animals.csv')
+for state, animal in csv.reader(f):
+    c[animal] = c.get(animal, 0) + 1
+items = []
+for animal, count in c.items():
+    items.append([count, animal])
+items.sort()
+print('5 most popular state animals:\n')
+for count, animal in items[-5:]:
+    print(count, animal)
+
+
+------------------
+Handing off a data
+structure controls
+program COMPLEXITY
+------------------
+
+
+
+“What are the 10 most popular
+ movie roles of all time?”
+
+import csv
+c = {}
+f = open('Data/movie-cast.csv')
+for movie, rank, actor, character in csv.reader(f):
+    c[character] = c.get(character, 0) + 1
+items = []
+for string, count in c.items():
+    items.append([count, string])
+items.sort()
+for count, string in items[-10:]:
+    print(count, string)
+
+
+
+“What roles does Daniel
+ Craig play most often?”
+
+import csv
+c = {}
+f = open('Data/movie-cast.csv')
+for movie, rank, actor, character in csv.reader(f):
+    if actor == 'Daniel Craig':
+        c[character] = c.get(character, 0) + 1
+items = []
+for string, count in c.items():
+    items.append([count, string])
+items.sort()
+for count, string in items[-10:]:
+    print(count, string)
+
+
+
+“Who has played ‘James Bond’
+ most often?”
+
+import csv
+c = {}
+f = open('Data/movie-cast.csv')
+for movie, rank, actor, character in csv.reader(f):
+    if character == 'James Bond':
+        c[actor] = c.get(actor, 0) + 1
+items = []
+for string, count in c.items():
+    items.append([count, string])
+items.sort()
+for count, string in items[-10:]:
+    print(count, string)
+
+
+
+======================
+For the rest of class:
+Get going on Lesson 8!

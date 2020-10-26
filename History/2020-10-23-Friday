@@ -1,0 +1,79 @@
+
+
+
+
+2020 October 23
+Friday
+
+
+
+==========
+Empiricism
+
+Using experiments to tell
+true from false.
+
+1800s Oxygen vs Phlogiston
+1900s Nils Bohr
+
+There is an art
+to designing an
+experiment
+
+
+• “Falsifiability”
+• Experiment design,
+  good vs bad
+
+
+filenames = [
+    'taxes2011.csv',
+    'taxes2010.csv',
+    'taxes2009.csv',
+    'taxes2012.csv',
+]
+filenames.sort()
+
+False belief: “Look!
+Earlier years come first,
+it must be sorting by number.”
+
+Experiment: ‘taxes9.csv’
+
+Result: It isn’t sorting by
+number, or `taxes9.csv` would
+come first! It’s merely doing
+dictionary order, character
+by character.
+
+
+You need to cultivate an
+*adversarial* relationship
+with beliefs
+
+
+a = [[1, 'apple'], [2, 'orange']]
+a.sort()
+
+
+
+=============
+Introspection
+
+The Python language is
+unusual: it lets programs
+look at their own state
+
+dir()
+locals()
+
+This can help more quickly
+confirm or deny your guess
+about what your program is
+doing
+
+
+========
+Lesson 8
+
+• Make some more progress!

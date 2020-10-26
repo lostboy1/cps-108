@@ -13,13 +13,8 @@ Score: 5 / 5 = 100%
 
 =========================== lesson-05.ipynb ===========================
 
-The solution for Exercise 9 does not yet produce the correct output.
-
-Score: 8 / 9 = 88%
+Score: 9 / 9 = 100%
 
 =========================== lesson-06.ipynb ===========================
 
-There does not yet seem to be a solution for Exercise 9
-There does not yet seem to be a solution for Exercise 10
-
-Score: 8 / 10 = 80%
+Score: 10 / 10 = 100%
