@@ -1,0 +1,127 @@
+
+
+
+2020 October 26
+Monday
+
+
+
+=============
+4 Weeks Left!
+
+• 3 more weeks of new lessons
+• 4th week: lecture & catching up
+
+• This Wednesday: no class
+• Instead, use the time to catch up
+
+
+
+===========================
+Sorting strings with digits
+
+A quick further note on a topic
+we discussed last week:
+
+
+a = ['lesson8', 'lesson9', 'lesson10']
+a.sort()
+print(a)
+
+a = ['lesson08', 'lesson09', 'lesson10']
+a.sort()
+print(a)
+
+n = 8
+name = f'lesson{n:02}'
+print(name)
+
+
+Takeaway:
+
+That’s why, if you look at
+our Lesson notebooks, they
+all use 2 digit numbers!
+
+
+
+=======================
+Test-driven development
+
+• YOU NEED TESTS
+• Programs are too easy to
+  break while “fixing” them
+
+========
+Skyfield
+
+• Julian calendar support
+  Broke `utc(2020, [1,2,3])`
+
+  https://rhodesmill.org/skyfield/time.html#date-arrays
+  Doctests vs code samples
+
+  https://github.com/skyfielders/python-skyfield/blob/9a718e78817055b23dd6faca89393b8f5907c674/skyfield/tests/test_timelib.py#L82
+
+• t.utc_strftime()
+  -> '2014-01-18 01:35:38 UTC'
+
+  Added support for years like “95 BC” (“-94”)
+  Which broke day-of-year support
+    `%Y-%m-%d`   `%Y-%j`
+    2020-10-26  2020-300
+
+  https://github.com/skyfielders/python-skyfield/issues/456
+
+  https://github.com/skyfielders/python-skyfield/blob/9a718e78817055b23dd6faca89393b8f5907c674/skyfield/tests/test_timelib.py#L388
+
+==============
+Without tests:
+
+• Boss asks for new feature
+• You deliver the feature
+• Some OTHER part of the
+  product is now broken!
+
+• Frustration
+• Unmet deadlines
+• Unhappy customers
+• Boss no longer trusts you
+
+• Management, feeling out of
+  control, imposes:
+  - Mandatory project plans
+  - Extra levels of review
+  - QA testing before release
+
+===============
+Synth/square.py
+
+======
+Try #1
+
+def square_wave(n):
+    samples = []
+    for i in range(n):
+        samples.append(1)
+    for i in range(n):
+        samples.append(-1)
+    return samples
+
+======================
+Adding and multiplying
+strings and lists
+
+
+'abc' + 'def'
+'abc' * 3
+print('=' * 12)
+
+['a', 'b'] + ['c', 'd']
+['a', 'b'] * 3
+
+======
+Try #2
+
+def square_wave(n):
+    return [1] * n + [-1] * n
