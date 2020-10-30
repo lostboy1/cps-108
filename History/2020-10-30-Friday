@@ -1,0 +1,235 @@
+
+
+
+2020 October 30
+Friday
+
+
+
+=========================
+Functions and Refactoring
+
+
+Remember Lesson 2?
+
+> Print the state animal of Texas.
+> Print the state animal of Virginia.
+> Print every state whose animal is the “Beaver”.
+> Print every animal that is some kind of “seal”.
+> Print every animal that is some kind of “whale”.
+> Print every state whose animal is some kind of “bear”.
+
+“Print the state animal of Texas.”
+
+--
+
+import csv
+for state, animal in csv.reader(open('Data/state-animals.csv')):
+    if state == 'Texas':
+        print(animal)
+
+--
+
+import csv
+animals = csv.reader(open('Data/state-animals.csv'))
+
+animals2 = []
+for state, animal in animals:
+    if state == 'Texas':
+        animals2.append([state, animal])
+
+for state, animal in animals2:
+    print(animal)
+
+--
+
+We might imagine turning
+these into general tools:
+
+import csv
+
+def load():
+    return csv.reader(open('Data/state-animals.csv'))
+
+def state_equals(pattern, states_and_animals):
+    matches = []
+    for state, animal in states_and_animals:
+        if state == pattern:
+            matches.append([state, animal])
+    return matches
+
+def print_animals(states_and_animals):
+    for state, animal in states_and_animals:
+        print(animal)
+
+Then we could:
+
+# Print the state animal of Texas.
+rows = load()
+rows2 = state_equals('Texas', rows)
+print_animals(rows2)
+
+# Or, making the values "anonymous"
+# by not stopping to assign a name
+# to each one:
+print_animals(state_equals('Texas', load()))
+
+The answer is only one line!
+
+• Solution is longer
+• But parts are reusable
+
+--
+
+Critique: state_equals() is pretty
+   specific, we would also need to
+   write animal_equals().
+
+What if we make it general?
+
+def field_equals(field, value, rows):
+    matches = []
+    for row in rows:
+        if row[field] == value:
+            matches.append(row)
+    return matches
+
+# Print the state animal of Texas.
+print_animals(field_equals(0, 'Texas', load()))
+
+--
+
+We can do the same
+thing for print!
+
+def print_field(i, rows):
+    for row in rows:
+        print(row[i])
+
+# Print the state animal of Texas.
+print_field(1, field_equals(0, 'Texas', load()))
+
+--
+
+See `animal_tools.py`!
+
+import animal_tools as a
+
+# Print the state animal of Texas.
+a.print_field(1, a.field_equals(0, 'Texas', a.load()))
+
+# Print the state animal of Virginia.
+a.print_field(1, a.field_equals(0, 'Virginia', a.load()))
+
+# Print every state whose animal is the “Beaver”.
+a.print_field(0, a.field_equals(1, 'Beaver', a.load()))
+
+# Print every animal that is some kind of “seal”.
+a.print_field(1, a.field_endswith(1, 'seal', a.load()))
+
+# Print every animal that is some kind of “whale”.
+a.print_field(1, a.field_endswith(1, 'whale', a.load()))
+
+# Print every state whose animal is some kind of “bear”.
+a.print_field(0, a.field_endswith(1, 'bear', a.load()))
+
+
+Programmers call this
+“factoring out” common code
+
+(Think of canceling common
+ factors in math class!)
+
+
+We have “refactored” the code:
+ rearrange WITHOUT changing
+    what the code does!
+
+
+
+"Library" = collection of functions (or
+       of even fancier things like classes).
+       Examples: “animal_tools.py”, “csv”
+
+"API" = Application Programmer Interface
+        List of functions and arguments
+        Contract: between library and uses it
+
+
+
+====
+HTTP
+
+“Hypertext Transfer Protocol”
+
+
+$ telnet google.com 80
+GET / HTTP/1.0
+Host: google.com
+
+Typing these two lines
+followed by a blank line
+results in Google answering!
+
+HTTP/1.0 301 Moved Permanently
+Location: http://www.google.com/
+
+
+An HTTP response can be any
+kind of file: an image, a PDF,
+or plain text.  But HTTP was
+designed around a particular
+format.
+
+
+====
+HTML
+
+Hypertext Markup Language
+
+(Or, how to festoon your
+ text with way too many
+ angle brackets!)
+
+You can make words <b>bold</b>
+or <i>italic</i>.
+
+You can <a href="https://www.bluffton.edu/">
+turn a phrase</a> into a clickable link.
+
+<p>
+You can put sentences
+inside of a paragraph.
+</p>
+
+<div>
+ <p>
+  And paragraph can go
+  inside of divisions!
+ </p>
+</div>
+
+
+(We can save the above text
+ to “page.html” in VS Code, and
+ open it in the browser.)
+
+This is an example of
+ a MARKUP LANGUAGE:
+
+      Plain text
+          +
+ With rules making some
+   characters special
+
+
+====
+Plan
+
+Monday: we will learn how
+  to download web pages and
+  parse their content using
+  methods like .split()!
+
+Today: work on Lesson 8 and
+  Synth/gain.py

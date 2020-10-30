@@ -18,3 +18,17 @@ Score: 9 / 9 = 100%
 =========================== lesson-06.ipynb ===========================
 
 Score: 10 / 10 = 100%
+
+=========================== lesson-07.ipynb ===========================
+
+Score: 6 / 6 = 100%
+
+=========================== lesson-08.ipynb ===========================
+
+The solution for Exercise 1 does not yet produce the correct output.
+The solution for Exercise 2 does not yet produce the correct output.
+There does not yet seem to be a solution for Exercise 3
+There does not yet seem to be a solution for Exercise 4
+There does not yet seem to be a solution for Exercise 5
+
+Score: 0 / 5 = 0%
