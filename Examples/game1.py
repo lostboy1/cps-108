@@ -18,13 +18,8 @@ c.create_oval(105, 320, 115, 380, fill='red')
 c.create_oval(109, 320, 111, 380, fill='white')
 c.create_oval(440, 0, 550, 110, fill='yellow')
 c.create_rectangle(0, 0, 505, 50, fill='light grey')
-
-birds = [
-    c.create_polygon(300, 175, 335, 200, 300, 185, 265, 200, fill='white'),
-    c.create_polygon(165, 125, 200, 150, 165, 135, 130, 150, fill='white'),
-]
-
-gun = c.create_rectangle(450, 450, 480, 480, fill='red')
+c.create_polygon(300, 175, 335, 200, 300, 185, 265, 200, fill='white')
+c.create_polygon(165, 125, 200, 150, 165, 135, 130, 150, fill='white')
 
 def react_to_click(event):
     root.quit()

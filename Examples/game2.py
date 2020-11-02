@@ -24,16 +24,10 @@ birds = [
     c.create_polygon(165, 125, 200, 150, 165, 135, 130, 150, fill='white'),
 ]
 
-gun = c.create_rectangle(450, 450, 480, 480, fill='red')
-
-count = 0
-
 def animate():
-    global count
-
     # Make bird wings flap.
 
-    if count % 5 == 0:
+    if c.count % 5 == 0:
         for bird in birds:
             b = c.coords(bird)
             yc = (b[1] + b[5]) / 2
@@ -46,8 +40,9 @@ def animate():
             c.coords(bird, b)
 
     root.after(42, animate)
-    count = count + 1
+    c.count = c.count + 1
 
+c.count = 0
 animate()
 
 def react_to_click(event):
