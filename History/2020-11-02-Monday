@@ -1,0 +1,204 @@
+
+
+
+2020 November 2
+Monday
+
+
+
+========================
+Open Data, Open Research
+
+https://github.com/fivethirtyeight/data
+
+
+
+====================
+game.py and game2.py
+
+
+
+=====
+Today
+
+• A few notes on
+  language design
+• Introduction to
+  “screen scraping”
+
+
+
+===========================
+Filenames and leading zeros
+
+Images from last weekend:
+...
+trip (36).tif
+trip (37).tif
+trip (38).tif
+trip (39).tif
+trip (4).tif
+trip (40).tif
+trip (5).tif
+trip (6).tif
+...
+
+That’s why this file is named:
+“2020-11-02-Monday”
+
+n = 2
+print(f'The number is {n:02}.')
+
+https://docs.python.org/3/library/string.html#formatspec
+https://docs.python.org/3/library/stdtypes.html#string-methods
+
+It’s useful to review all
+the options — otherwise, you
+might re-implement something
+that’s already there!
+
+print(f'The number is {n:02}.')
+
+n = 2
+s = f'{n}'
+zeros = '0' * (2 - len(s))
+print('The number is ' + zeros + s + '.')
+
+n = 2
+s = f'{n}'.zfill(2)
+print('The number is ' + s + '.')
+
+
+
+===================
+“Library” and “API”
+
+"Library" = collection of functions (or
+       of even fancier things like classes).
+       Examples: “animal_tools.py”, “csv”
+
+"API" = Application Programmer Interface
+        List of functions and arguments
+        Contract: between library and uses it
+
+Designing an API involves weighing
+convenience vs size vs recall
+
+str.startswith()
+str.endswith()
+
+def my_startswith(s):
+    ...
+
+def my_endswith(s):
+    ...
+
+• Convenience: how much easier?
+• Size: how much code required?
+• Recall: what if programmers
+  never remember it’s there?
+
+
+
+=================
+Language keywords
+
+Most languages forbid using
+words like “for” and “in” and
+“if” in assignment statements.
+
+in = 10
+for = 'String'
+
+These are called “keywords”
+and are special to the language.
+
+Because each keyword reduces
+the pool of names programmers
+can use:
+
+• Languages are often designed
+  to have as FEW keywords as
+  possible
+
+• Languages prefer to RE-USE
+  keywords in different contexts
+  rather than make new ones
+
+Examples in Python:
+
+             ==
+    for item in items:
+             ==
+
+               ==
+  if 'Moose' in 'I like the Moose!':
+               ==
+
+The “in” operator
+is COMPLETELY unrelated to
+its use in a “for” loop
+
+print('se' in 'Moose')
+print('ea' in 'Moose')
+
+
+
+====
+HTML
+
+Hypertext Markup Language
+
+(Or, how to festoon your
+ text with way too many
+ angle brackets!)
+
+You can make words <b>bold</b>
+or <i>italic</i>.
+
+You can <a href="https://www.bluffton.edu/">
+turn a phrase</a> into a clickable link.
+
+<p>
+You can put sentences
+inside of a paragraph.
+</p>
+
+<div>
+ <p>
+  And paragraph can go
+  inside of divisions!
+ </p>
+</div>
+
+
+(We can save the above text
+ to “page.html” in VS Code, and
+ open it in the browser.)
+
+This is an example of
+ a MARKUP LANGUAGE:
+
+      Plain text
+          +
+ With rules making some
+   characters special
+
+
+
+=================
+“Screen Scraping”
+
+Example:
+https://blufftonbeavers.com/sports/mgolf/2020-21/schedule
+
+• Hugely popular!
+• Google Chrome: Ctrl-U
+• “Unstructured” data
+
+Hint: use `.strip()` to remove
+extra space and line endings
+
+
+• Work on Lesson 9
+• Quiz 9 is due Tuesday night
