@@ -1,0 +1,164 @@
+
+
+
+2020 November 4
+Wednesday
+
+
+=====
+Game!
+
+Examples/game3.py
+
+
+
+=====
+Golf!
+
+1. Fetching web page
+2. Screen scraping
+3. Numeric data
+
+
+
+====
+HTTP
+
+“Hypertext Transfer Protocol”
+
+
+
+$ telnet google.com 80
+GET / HTTP/1.0
+Host: google.com
+
+Typing these two lines
+followed by a blank line
+results in Google answering!
+
+HTTP/1.0 301 Moved Permanently
+Location: http://www.google.com/
+
+
+
+“http://www.google.com/” is called
+a “URL”: Uniform Resource Locator
+
+• http://www.google.com/
+• https://www.google.com/
+• ftp://ftp.iers.org/products/
+• git@github.com:skyfielders/python-skyfield.git
+• chrome://settings/
+
+
+
+An HTTP response can be
+any kind of file: an image,
+a PDF, or plain text.  The
+“Content-Type” header tells
+the browser what type.
+
+
+
+HTML was specifically designed
+for use with HTTP.
+
+<a href="https://google.com">Google</a>.
+
+
+
+==================
+10 HTTP Essentials
+
+“Request” →
+Method: “GET”
+Path: “/”
+Headers
+
+← “Response”
+Status
+Headers
+  “301 Moved Permanently
+   Location: …”
+
+  “200 OK
+   Content-Type: …
+   Content-Length: …”
+  Body
+
+
+
+Check out the “Network”
+tab in the Google Chrome
+debugging toolkit!
+
+
+
+==============
+HTTP in Python
+
+
+Three options
+
+1. httplib
+2. urllib
+3. requests
+
+
+import httplib
+c = httplib.HTTPConnection('google.com')
+c.request('GET', '/')
+r = conn.getresponse()
+content = r.read()
+r.status
+r.reason
+
+
+from urllib.request import urlopen
+u = urlopen('http://google.com')
+content = u.read()
+u.status
+u.content_type
+
+
+Requests: “3rd party”
+
+“3rd party”: code that’s:
+• not part of the language
+• not part of your project
+
+3rd party code need to be
+installed separately
+
+
+
+=====================
+More Screen Scraping!
+
+
+See:
+• Examples/golf.htm
+• Examples/golf1.py
+
+
+Average strokes from the
+Gray Wolf Invitational:
+
+https://blufftonbeavers.com/sports/mgolf/2020-21/files/golf.htm
+
+
+from urllib.request import urlopen
+u = urlopen('https://blufftonbeavers.com/sports/mgolf/2020-21/files/golf.htm')
+
+
+Pretend you’re a browser!
+
+
+from urllib.request import Request, urlopen
+r = Request('https://blufftonbeavers.com/sports/mgolf/2020-21/files/golf.htm')
+r.headers['user-agent'] = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36'
+u = urlopen(r)
+
+
+See “Examples/golf1.py” for the
+steps involved in scraping.

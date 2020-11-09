@@ -1,0 +1,55 @@
+
+
+2020 November 6
+Friday
+
+
+
+=====
+Game!
+
+
+
+(That VS Code control key
+ I was trying to remember
+ Wednesday?  Ctrl+D)
+
+
+
+==========================
+Screen Scraping, Continued
+
+
+Examples/golf1.py
+
+
+========
+Problem!
+
+Trying to connect our web page
+download to the scraping code
+raises an exception:
+
+Traceback (most recent call last):
+  File "golf1.py", line 14, in <module>
+    content = content.split('Player Standings')[1]
+TypeError: a bytes-like object is required, not 'str'
+
+
+=========
+Encodings
+
+ASCII Text
+
+• 7 bits
+• 8th bit = 0
+• 32 control characters
+• 95 printable characters
+• One final control: DEL
+
+Binary
+
+• All 8 bits used
+• Programs, images
+• View with “less”
+• View with hex editor
