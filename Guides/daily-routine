@@ -1,0 +1,84 @@
+Here’s the steps you will take
+at the beginning of each class to download the new assignment,
+and to save your work at the end of each class period.
+
+These steps should work fine
+if VS Code, git, Python, and the Notebook are properly installed!
+If you suspect that something is not properly installed,
+check out our course
+[Mac Install Guide](https://learn.bluffton.edu/mod/page/view.php?id=246280)
+or
+[Windows Install Guide](https://learn.bluffton.edu/mod/page/view.php?id=246281)
+for help.
+
+1. **Run VS Code.**
+   Type “code” into the search field
+   (in Windows, it’s in the lower-left corner of the screen;
+   on Mac, you bring it up by typing Command-Space)
+   and press Enter when you see the name “Visual Studio Code” come up.
+
+2. **Open the folder that holds your clone of the course materials.**
+
+   * Usually VS Code remembers the folder you had open last time,
+     and in the Explorer
+     (the left panel whose symbol is at the very top)
+     you will already see files like `lesson-01.ipynb`
+     and `lesson-02.ipynb`.
+     In that case you are ready to start!
+
+   * Or the Explorer will say “No folder opened”
+     in which case you should click the “Open Folder” button
+     and select the folder that’s your clone of your GitHub repository.
+     On the Windows machines in the lab you will hopefully find it
+     on your `H:`.
+
+   * If you can’t find your previous clone of the repository,
+     just make a new one!
+     Ctrl-Shift-P “Clone” should bring up the Git: Clone tool
+     where you can paste in your repository’s URL from GitHub.
+     Put the new folder in your Documents on your personal machine,
+     or on your `H:` in the college’s cluster.
+
+3. **Pull new course materials from your repository.**
+   Ctrl-Shift-P “pull” should let you select Git: Pull.
+   If VS Code asks “Would you like Code to periodically run ‘git fetch’?”,
+   try answering “Yes”.
+
+4. **Always run the first cell before getting back to work.**
+   The `start_lesson(…)` function is what prepares the Notebook
+   to give you feedback about your answer to each Exercise.
+
+5. **Work on the Lesson.**
+   You can always verify that things are working
+   before getting started on each day’s lesson
+   by selecting the original `lesson-01.ipynb`,
+   pressing Shift-Enter in its first code cell
+   and verifying that it replies “Welcome to Lesson 1”.
+
+6. **Save your work** from VS Code at the end of each class!
+
+   * Press Ctrl-S to save the lesson notebook you have been working on.
+   * Press Ctrl-Shift-P and type “pull” to run “Git: Pull”.
+   * Bring up the source control tool, which is the third sidebar in VS Code.
+   * In case the source control tool hasn’t noticed you modified a file,
+     click the circle with the arrow up near the top.
+   * Move the mouse over the word “Changes”
+     and click the “+” button to stage your changes.
+   * In the text box above “Changes”
+     that says “Message (Ctrl+Enter)”,
+     type a short message like “Monday class”
+     and press Ctrl-Enter to commit your changes.
+     A small blue progress bar will appear momentarily
+     as your changes are committed.
+   * Press Ctrl-Shift-P and type “push” to run Git: Push.
+     A small blue progress bar will appear momentarily
+     as your changes are pushed up to GitHub.
+   * For extra safety the first few times:
+     visit your repository on GitHub
+     and verify that it shows that you just updated the source code.
+     I will also verify on my end that I see your work —
+     always feel free to ping me on Slack if you need me to double-check!
+
+7. If you used a Technology Center machine,
+   **turn over the keyboard sign** so it gets cleaned once you leave.
+   Thanks!

@@ -1,0 +1,80 @@
+
+# VS Code
+
+**How can you tell whether it’s installed?**
+Press Command-Space and type “vs code”
+and see whether VS Code comes up as the first suggestion.
+If it does, simply press Enter to launch!
+
+**If it’s not installed, what do I do?**
+You can install VS Code for Mac here:
+[https://code.visualstudio.com/](https://code.visualstudio.com/)
+
+# Git
+
+**How can you tell whether it’s installed?**
+In VS Code, press Command-Shift-P and type “clone”.
+If “Git: Clone” comes up as an option,
+then git is already successfully installed!
+
+**If it’s not installed, what do I do?**
+There are several ways to install git on a Mac.
+Here’s the best one:
+
+1. Visit [https://brew.sh/](https://brew.sh/).
+2. Select the text of the “Install Homebrew” command
+   and press Command-V to copy it to the clipboard.
+3. Opening a terminal by pressing Command-Space, typing “term”,
+   and pressing Enter.
+   A terminal window should open.
+   Press Command-V to paste in the Homebrew command
+   and Enter to run it.
+4. Run `brew install git`.
+5. Run these two commands to tell git
+   what email address and name to use when it saves your work
+   (put in your own name and email):
+
+```
+git config --global user.name "YOUR NAME"
+git config --global user.email YOUR_EMAIL@bluffton.edu
+```
+
+Close VS Code, re-launch VS code, and the “Git: Clone” command
+should now be available when you press Command-Shift-P.
+
+# Python
+
+**How can you tell whether it’s installed?**
+In VS Code, press Command-Shift-P and type “py sel”
+to bring up “Python: Select Interpreter” and press Enter.
+After a brief search of your system,
+VS Code will show you the Python versions it found.
+If Python 3.8 is in the list, then it’s installed!
+Highlight it and press Enter to select it so that VS Code uses it.
+
+**If it’s not installed, what do I do?**
+You can install Python 3.8 for Mac here:
+[https://www.python.org/ftp/python/3.8.0/python-3.8.0-macosx10.9.pkg](https://www.python.org/ftp/python/3.8.0/python-3.8.0-macosx10.9.pkg)
+
+# Python Notebook and nbconvert
+
+**How can you tell whether it’s installed?**
+You can run the following install command,
+which installs the library if it is missing,
+or else happily reports `Requirement already satisfied`
+for every package the notebook needs.
+You can launch the Terminal by typing Command-Space “term” Enter
+and paste a line of text into the terminal with Command-V:
+
+```
+/Library/Frameworks/Python.framework/Versions/3.8/bin/python3 -m pip install --user notebook
+```
+
+**What if the Notebook does not start successfully?**
+As of early September,
+part of the Notebook infrastructure has broken the Notebook in VS Code!
+Running this command in the terminal should fix it:
+
+```
+/Library/Frameworks/Python.framework/Versions/3.8/bin/python3 -m pip install --user --force-reinstall 'traitlets==4.3.3'
+```
