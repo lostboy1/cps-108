@@ -29,3 +29,36 @@ There does not yet seem to be a solution for Exercise 4
 There does not yet seem to be a solution for Exercise 5
 
 Score: 3 / 5 = 60%
+
+=========================== lesson-09.ipynb ===========================
+
+The solution for Exercise 2 does not yet produce the correct output.
+The solution for Exercise 4 does not yet produce the correct output.
+There does not yet seem to be a solution for Exercise 5
+
+Score: 2 / 5 = 40%
+
+=========================== lesson-10.ipynb ===========================
+
+The solution for Exercise 5 does not yet produce the correct output.
+
+Score: 4 / 5 = 80%
+
+=========================== lesson-11.ipynb ===========================
+
+There does not yet seem to be a solution for Exercise 1
+There does not yet seem to be a solution for Exercise 2
+There does not yet seem to be a solution for Exercise 3
+
+Score: 0 / 3 = 0%
+
+=========================== lesson-12.ipynb ===========================
+
+There does not yet seem to be a solution for Exercise 1
+There does not yet seem to be a solution for Exercise 2
+There does not yet seem to be a solution for Exercise 3
+There does not yet seem to be a solution for Exercise 4
+There does not yet seem to be a solution for Exercise 5
+There does not yet seem to be a solution for Exercise 6
+
+Score: 0 / 6 = 0%
