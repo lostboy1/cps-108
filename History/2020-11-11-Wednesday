@@ -1,0 +1,206 @@
+
+
+
+2020 November 11
+Wednesday
+
+
+1. Removing list items
+   in our game
+2. “datetime” and “while”
+3. Screen Scraping
+
+
+
+===================
+Removing List Items
+
+
+THE PROBLEM
+
+numbers = [0,1,2,3,4]
+for n in numbers:
+    if n == 2:
+        numbers.remove(n)
+    else:
+        print(n, end=' ')
+
+Prints:
+
+0 1 4
+
+
+SOLUTION #1
+
+Iterate over a COPY of
+the list, created by
+calling list():
+
+numbers = [0,1,2,3,4]
+for n in list(numbers):
+    if n == 2:
+        numbers.remove(n)
+    else:
+        print(n, end=' ')
+
+0 1 3 4
+
+
+SOLUTION #2
+
+Delete after looping:
+
+numbers = [0,1,2,3,4]
+doomed = []
+for n in numbers:
+    if n == 2:
+        doomed.append(n)
+    else:
+        print(n, end=' ')
+for n in doomed:
+    numbers.remove(n)
+
+0 1 3 4
+
+
+So that’s how we
+can remove a missile
+from our game!
+
+game5.py ---> game6.py
+
+
+==================
+Looping over dates
+
+
+APPROACH #1
+
+start = date(2021, 1, 20)
+end = date(2021, 5, 6)
+
+d = start
+days = (end - start).days + 1
+for i in range(days):
+    print(d)
+    d = d + timedelta(1)
+print('done')
+
+
+APPROACH #2
+
+from datetime import date, timedelta
+
+start = date(2021, 1, 20)
+end = date(2021, 5, 6)
+
+d = start
+while d <= end:
+    print(d)
+    d = d + timedelta(1)
+print('done')
+
+
+Both of these examples will
+appear at the top of Lesson 11
+for you to use in Exercises!
+
+
+
+=======================
+Encodings: let’s sum up
+
+
+        Bytes
+   0-127     128-255
+
+   ASCII        ?
+             Latin-1
+             Latin-2
+              UTF-8
+
+
+b'Hello, w\xc3\xb6rld.'
+
+\n    Newline
+\r    Carriage return
+\t    Tab
+\xAB  Hexadecimal AB
+      0-9A-F ← 16 digits
+
+\x00    Character 0
+\x01    Character 1
+\x02    Character 2
+ ...
+\xfd    Character 253
+\xfe    Character 254
+\xff    Character 255
+
+>>> y = b'Hello, w\xc3\xb6rld.'
+>>> list(y)
+[72, 101, 108, 108, 111, 44, 32, 119, 195, 182, 114, 108, 100, 46]
+
+>>> y.decode('ascii')
+UnicodeDecodeError: 'ascii' codec can't decode...
+
+>>> print(y.decode('latin1'))
+Hello, wÃ¶rld.
+
+>>> print(y.decode('latin2'))
+Hello, wĂśrld.
+
+>>> print(y.decode('utf8'))
+Hello, wörld.
+
+
+
+       Typing Strings
+
+ Byte strings? Start with B!
+   b'Hello, w\xc3\xb6rld.'
+
+ Text strings? Plain quotes!
+      'Hello, wörld.'
+
+
+
+So, what about our exception
+in `Examples/golf1.py`?
+
+Traceback (most recent call last):
+  File "golf1.py", line 14, in <module>
+    content = content.split('Player Standings')[1]
+TypeError: a bytes-like object is required, not 'str'
+
+
+
+Key question: What KIND of
+string has HTTP returned?
+
+
+• By default, open()
+  interprets a file as TEXT
+
+• But urlopen().read()
+  returns raw BYTES
+
+
+So what happened?
+
+• We got our code working
+  against a STRING read
+  from a file.
+
+• Then tried to switch
+  and use BYTES loaded
+  from the web.
+
+
+To make open() behave like
+urlopen().read():
+
+open(path, 'rb')
+
+Then:
+
+decode('utf-8')

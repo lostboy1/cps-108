@@ -1,0 +1,96 @@
+
+
+
+2020 November 9
+Monday
+
+
+
+=============
+2 weeks left!
+
+• 2 more lessons
+• 2 more quizzes
+• NO FINAL
+
+
+
+=====
+Game!
+
+
+
+==========
+Questions?
+
+
+
+=====
+ASCII
+
+ !"#$%&'()*+,-./0123456789:;<=>?
+@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_
+`abcdefghijklmnopqrstuvwxyz{|}~
+
+• 128 combinations
+  • 32 control characters
+  • 95 printable characters
+  • DEL “Delete”
+
+Digits in order: digit+48
+Alphabets: upper 65+, lower 97+
+Uppercase→lowercase: 32
+
+bin(ord('A')) vs bin(ord('a'))
+
+.upper() .lower()
+
+• 7 bits
+• 8th bit = 0
+• bin(127) vs bin(128)
+
+======
+Binary
+
+• All 8 bits used
+• 256 combinations
+• Programs, images
+• View with “less”
+• View with hex edit
+• View with Python
+
+What happened when Europe
+folks started using ASCII
+computers?
+
+søster
+
+They invented extensions
+to ASCII that defined the
+remaining 128 codes!
+
+b = 'søster'.encode('latin1')
+list(b)
+b.decode('latin1')
+
+What if someone in Eastern
+Europe opened the file?
+
+b.decode('latin2')
+
+
+Unicode
+
+• ASCII + 8-bit codes
+• https://home.unicode.org/
+
+
+
+Python?
+
+• `bytes` — raw data
+• `str` — text
+
+b = b'\xc3\xa1\xc3\xab'
+s = b.decode('utf-8')
+print(s)

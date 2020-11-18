@@ -1,0 +1,149 @@
+
+
+
+
+2020 November 16
+Monday
+
+
+
+===========
+Almost done
+
+• No further quizzes!
+• No additional lessons!
+• Finish: Lessons; Synth
+
+Snag: final lesson: file lengths
+
+
+================
+Notes on Quiz 10
+
+• Order of operations
+  crucial when reading
+  “d - 2 * week”
+
+• “What does .weekday() return…?”
+  Intention was that you actually
+  call .weekday() in Python.
+
+• Which method call produces a
+  string that Python sorts
+  correctly?
+
+  from datetime import date
+  d = date.today()
+  print(d.strftime('%A %d, %Y'))
+  print(d.strftime('%Y-%m-%d'))
+  print(d.strftime('%m/%d/%y'))
+
+  Monday 16, 2020
+  2020-11-16
+  11/16/20
+
+
+
+=======
+Caching
+
+See “Examples/golf2.py”
+"Stale" data
+
+
+==========
+Filesystem
+
+• file
+• directory
+• path
+
+/usr/bin/bash
+
+• pwd / os.getcwd()
+• cd  / os.chdir()
+
+
+
+============
+Python Types
+
+       bytes
+decode() ↓↑ encode()
+        str
+
+ str ↔ int ↔ float
+       But:
+  int() vs round()
+
+        str
+  list() ↓↑ ''.join()
+  split()
+        list
+            .keys()
+  dict() ↓↑ .values()
+            .items()
+        dict
+
+Python types are
+all “callables” that
+you can invoke like a
+function: by following
+them with parens with
+arguments inside.
+
+int('97') + 1
+list('abc')
+
+d = {'a': 1, 'b': 2}
+d.keys()
+d.values()
+d.items()
+
+items = [['a', 1], ['b', 2]]
+dict(items)
+
+You can also make copies
+of a list of dictionary
+by calling the types:
+
+a = [4, 5, 6]
+b = list(a)
+
+d = {'a': 1, 'b': 2}
+e = dict(d)
+
+
+==========
+Truthiness
+
+if n > 0:
+if animal > winner:
+
+"and" "or"
+
+if n > 0 and animal > winner:
+if n > 0 or animal > winner:
+
+Things that are false:
+
+• None
+• Zero (False, 0, 0.0)
+• Zero-length str or list or dict
+
+
+a = []
+...
+if a:
+    print('At least one item')
+else:
+    print('No items')
+
+
+Trade-off between brevity
+and explicitness — these
+are equivalent for list `a`:
+
+if a:
+if len(a):
+if len(a) > 0:
