@@ -29,15 +29,11 @@ Score: 5 / 5 = 100%
 
 =========================== lesson-09.ipynb ===========================
 
-The solution for Exercise 2 does not yet produce the correct output.
-
-Score: 4 / 5 = 80%
+Score: 5 / 5 = 100%
 
 =========================== lesson-10.ipynb ===========================
 
-The solution for Exercise 5 does not yet produce the correct output.
-
-Score: 4 / 5 = 80%
+Score: 5 / 5 = 100%
 
 =========================== lesson-11.ipynb ===========================
 
@@ -45,11 +41,8 @@ Score: 3 / 3 = 100%
 
 =========================== lesson-12.ipynb ===========================
 
-There does not yet seem to be a solution for Exercise 1
-There does not yet seem to be a solution for Exercise 2
-There does not yet seem to be a solution for Exercise 3
-There does not yet seem to be a solution for Exercise 4
+The solution for Exercise 4 does not yet produce the correct output.
 There does not yet seem to be a solution for Exercise 5
 There does not yet seem to be a solution for Exercise 6
 
-Score: 0 / 6 = 0%
+Score: 3 / 6 = 50%
