@@ -1,0 +1,208 @@
+
+
+
+2020 November 18
+Wednesday
+
+
+
+Reminder:
+Fill out all of your
+*Course Evaluations*
+
+
+
+https://www.bloomberg.com/news/articles/2020-11-17/new-york-s-4-year-olds-are-mastering-zoom-to-get-into-elite-kindergartens
+
+
+
+=========
+Lesson 12
+
+File length problem:
+Windows and line endings
+
+Linux:   '\n'
+macOS:   '\n'
+Windows: '\r\n'
+
+A text file is always LONGER
+on Windows, so instead of:
+
+file_length = os.stat('lesson-01.ipynb').st_size
+
+— try:
+
+file_length = len(open('lesson-01.ipynb', 'rb').read().replace(b'\r\n', b'\n'))
+
+
+
+===================
+Lists inside a list
+
+animals = ['Bison', 'Orca', 'Sheep']
+a = []
+for animal in animals:
+    a.append([len(animal), animal])
+print(a)
+
+--> [[5, 'Bison'],
+     [4, 'Orca'],
+     [5, 'Sheep']]
+
+a.sort()
+for length, animal in a:
+    print(animal)
+
+--> Orca
+    Bison
+    Sheep
+
+
+
+=======
+Career:
+
+https://danluu.com/programmer-moneyball/
+
+
+ ** Find people to learn from! **
+
+
+Path #1
+  Get a job on a team of great
+  programmers you learn from
+
+Path #2
+  Get a job without many peers,
+  but connect using social media
+  and attending events
+
+
+      My Career
+
+│                ##
+│              ##
+│            ##
+│          ##
+│     #####
+│#####     ↑
+└────────────────────
+         2008
+    Skill vs. time
+
+
+
+Q: If you’re the best
+   programmer at your
+   workplace, who are
+   you learning from?
+
+
+2007: Python meetup
+2008: PyCon in Chicago
+2009: Went independent
+2016: Dropbox
+
+
+EITHER:
+  Be learning from
+  co-workers who are
+  even better than you
+OR:
+  • Twitter
+  • Meetups
+  • Conferences
+
+
+
+==========
+Truthiness
+
+True + 0
+False + 0
+
+type(True)
+isinstance(True, bool)
+isinstance(True, int)
+
+
+a = []
+...
+if a:
+    print('At least one item')
+else:
+    print('No items')
+
+
+Trade-off between brevity
+and explicitness — these
+are equivalent for list `a`:
+
+if a:
+if len(a):
+if len(a) > 0:
+
+
+“import this”:
+“Explicit is better than implicit”
+
+
+===
+WAT
+
+JavaScript, the beauty
+of exceptions, and the
+Zen of Python
+
+'456' - '123'  # math
+'456' + '123'  # concat strings!
+
+in both JS and Python
+
+
+==========
+Exceptions
+
+1. Catching
+2. Raising
+3. Inventing
+
+try:
+    n = state_animals[animal]
+except KeyError:
+    print('No state has that animal')
+
+for line in file:
+    fields = line.split(',')
+    if len(fields) != 2:
+        raise ValueError('each line must have a state and animal’)
+
+class FormatError(Exception):
+    "Line did not have two fields."
+
+
+
+=========
+Star-args
+
+How do you write print()?
+
+def print(a): ...
+def print(a, b): ...
+def print(a, b, c): ...
+
+def my_print(*args):
+    print('Number of args:', len(args))
+    print('Args:', args)
+
+>>> my_print('Hello', 'world')
+Number of args: 2
+Args: ('Hello', 'world')
+
+
+You can also DELIVER a list
+of arguments to a function:
+
+animals = ['Bison', 'Orca', 'Sheep']
+print(*animals)

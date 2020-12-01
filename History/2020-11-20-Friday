@@ -1,0 +1,336 @@
+
+
+
+
+2020 November 20
+Friday
+
+
+
+LAST DAY OF CLASS!
+
+
+
+=========
+cd Synths
+python tune.py
+
+Then, open “music.wav”
+
+
+
+========
+game7.py
+
+
+
+===============
+  A Few Final
+Python Features
+===============
+
+
+
+===========
+Plus-equals
+
+Instead of:
+n = n + 1
+
+Try:
+n += 1
+
++= -= *= /= //= %= etc
+
+
+
+==================
+If-else expression
+
+print(f'{n} items' if n else 'Empty cart')
+
+
+
+==========================
+Loops: “break”, “continue”
+
+for c in 'abc':
+    print(c)
+
+n = 2
+while n < 100:
+    print(n)
+    n = n * 2
+
+“break”
+for animal in animals:
+    if animal.startswith('A'):
+        break
+print(animal)
+
+“continue”
+Jumps immediately back to the
+top of the loop, skipping the
+rest of the loop body for the
+current item.
+
+# Print only big numbers.
+numbers = [6, 15, 9, 20, 1]
+for n in numbers:
+    if n < 10:
+        continue
+    print(n)
+
+--> 15 20
+
+Why use “continue”? To avoid
+the problem of code stepping
+toward the right margin
+
+Imagine skipping blank lines and
+also lines that start with '#';
+your first try might look like:
+
+for line in lines:
+    line = line.strip()
+    if line != '':
+        fields = line.split()
+        if fields[0] != '#':
+            state, animal = fields
+            print(state, animal)
+
+It’s better to use “continue”
+for cases where you decide you
+don’t care about the line:
+
+for line in lines:
+    line = line.strip()
+    if line == '':
+        continue
+    fields = line.split()
+    if fields[0] == '#':
+        continue
+    state, animal = fields
+    print(state, animal)
+
+Great result? Main idea
+of the code stays at same
+level of indentation!
+
+
+
+===============
+Comprehensions!
+
+>>> [n*n for n in range(5)]
+[0, 1, 4, 9, 16]
+
+>>> [n*n for n in range(10) if n % 2]
+[1, 9, 25, 49, 81]
+
+
+
+====================
+Aggregate functions!
+
+min()
+max()
+sum()
+sorted()
+
+
+
+========
+Lesson 2
+
+import csv
+rows = list(csv.reader(open('Data/state-animals.csv')))
+
+Following these 2 lines of code,
+the answer to almost EVERY EXERCISE
+of Lesson 2 is a single line of code!
+
+Then:
+
+2 print('\n'.join(state for state, animal in rows))
+3 print('\n'.join(animal for state, animal in rows))
+4 print(len(rows))
+5 print('\n'.join(animal for state, animal in rows if state == 'Texas'))
+6 print('\n'.join(animal for state, animal in rows if state == 'Virginia'))
+7 print('\n'.join(state for state, animal in rows if animal == 'Beaver'))
+8 print('\n'.join(animal for state, animal in rows if animal.endswith('seal')))
+9 print('\n'.join(animal for state, animal in rows if animal.endswith('whale')))
+10 print('\n'.join(state for state, animal in rows if animal.endswith('bear')))
+11 len([state for state, animal in rows if animal == 'Bison'])
+   OR
+   sum([animal == 'Bison' for state, animal in rows])
+12 sum([animal == 'Black bear' for state, animal in rows])
+13 sum([animal.endswith('bear') for state, animal in rows])
+14 min([animal for state, animal in rows])
+15 max([animal for state, animal in rows])
+
+“One line of code?”
+Except for Exercise 16.
+We’ll do it in three:
+
+16
+“print the name of the most popular state animal,
+ followed by the names of the states it belongs to!”
+
+from collections import Counter
+c = Counter(animal for state, animal in rows)
+count, winner = max([[count, animal] for animal, count in c.items()])
+print('\n'.join(state for state, animal in rows if animal == winner))
+
+
+
+Takeaway:
+
+• Solve problems using
+  intermediate data
+  structures!
+
+
+
+==================
+A Few Final Topics
+==================
+
+
+
+================
+Markup Languages
+
+An essential tool!  Allow plain
+text to include italics, bold,
+headings, etc.
+
+HTML:      This is <b>bold</b> and <i>italic</i>.
+Wikipedia: This is '''bold''' and ''italic''.
+Slack:     This is *bold* and _italic_.
+Markdown:  This is **bold** and *italic*.
+
+Markdown is the most popular
+among programmers!
+GitHub, Stack Overflow
+
+`x = 1`
+
+Huge: plain-text-with-markup
+interoperates with every tool
+that can process plain text!
+(Version control, etc)
+
+
+
+===================
+Regular Expressions
+
+“RE”
+
+Remember all the work we did
+to cut out the “87” here?
+
+...>&nbsp;87</font>...
+
+import re
+s = open('golf.htm').read()
+re.findall(r'>&nbsp;(\d+)</font>', s)
+
+If you learn regular expressions,
+they eliminate a LOT of code with
+split() startswith() endswith() etc.
+
+What is r'...'?
+A string where backslash “\”
+is not special, so it gets
+include in the string and
+the RE engine can see them.
+
+print('Hello\nworld.')
+print(r'Hello\nworld.')
+
+
+
+=========================
+Snags When Writing Python
+=========================
+
+
+
+=================
+Two names for the
+same data structure
+
+a = [4, 5, 6]
+b = a
+a.append(7)
+print(a)
+print(b)
+
+Use the list type if
+you want `b` to be a
+separate list!
+
+a = [4, 5, 6]
+b = list(a)
+a.append(7)
+print(a)
+print(b)
+
+
+
+==========================
+Iterators: only work once!
+
+Files and generators
+act so much like lists,
+it’s easy to forget
+that you use them up
+by reading them!
+
+import csv
+f = open('Data/state-animals.csv')
+n = 0
+for line in f:
+    n += 1
+print(n)
+n = 0
+for line in f:
+    n += 1
+print(n)
+
+To return to the beginning
+of the file to read again:
+
+f.seek(0)
+
+Or start with:
+
+lines = list(open('Data/state-animals.csv'))
+
+
+
+================
+Further features
+
+If you plan to dive into
+real-world Python code,
+read about:
+
+• Classes (capitalized names)
+• Context managers (“with”)
+• Generator functions
+
+
+
+===
+End
+===
+
+I hope you find
+that writing your own
+computer programs is
+useful both through
+the rest of college
+and beyond!
